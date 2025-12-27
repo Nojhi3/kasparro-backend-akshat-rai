@@ -1,6 +1,6 @@
 # Run the system
 up:
-	docker-compose up --build -d
+	docker compose up --build -d
 
 # Stop the system
 down:

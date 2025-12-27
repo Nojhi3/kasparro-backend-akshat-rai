@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  # The Database Service
+  # 1. The Database
   db:
     image: postgres:15-alpine
     container_name: kasparro_db
@@ -14,9 +14,27 @@ services:
       - "5432:5432"
     volumes:
       - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: [ "CMD-SHELL", "pg_isready -U ${POSTGRES_USER} -d ${POSTGRES_DB}" ]
+      interval: 5s
+      timeout: 5s
+      retries: 5
 
-  # We will add the 'app' service (your ETL + API) in Phase 5
-  # For now, we just need the DB running to start coding tables.
+  # 2. Your App (API + ETL)
+  app:
+    build: .
+    container_name: kasparro_app
+    restart: always
+    ports:
+      - "8000:8000"
+    env_file:
+      - .env
+    depends_on:
+      db:
+        condition: service_healthy
+    volumes:
+      # Mount code so you can edit without rebuilding (Development only)
+      - ./:/app
 
 volumes:
   postgres_data:

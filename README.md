@@ -90,7 +90,7 @@ Evidence of the background ETL job running and processing data successfully.
 
 ### 3. Swagger UI
 Visual confirmation of the API documentation and data endpoints.
-![Swagger UI Screenshot](kasparro-etl\misc\screenshots\swagger-ui.png)
+![Swagger UI Screenshot](misc/screenshots/docker-logs.png)
 
 ## Deployment
 The system is deployed on an AWS EC2 instance (Ubuntu 24.04).

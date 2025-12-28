@@ -68,8 +68,8 @@ The system is fully automated using a Makefile.
 ## API Documentation
 The API is secured using a custom header `x-api-key`.
 
-* **Base URL**: http://[YOUR_EC2_IP]:8000
-* **Interactive Documentation (Swagger UI)**: http://[YOUR_EC2_IP]:8000/docs
+* **Base URL**: http://13.61.5.11:8000
+* **Interactive Documentation (Swagger UI)**: http://13.61.5.11:8000/docs
 
 ### Endpoints
 * **GET /health**: Checks database connectivity and reports the last ETL run status.

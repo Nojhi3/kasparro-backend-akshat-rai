@@ -45,13 +45,13 @@ The system follows a "Clean Architecture" pattern to ensure modularity and testa
 ### Environment Variables
 Create a file named `.env` in the root directory with the following configuration:
 
-POSTGRES_USER=user
-POSTGRES_PASSWORD=password
-POSTGRES_DB=kasparro_etl
-POSTGRES_HOST=db
-POSTGRES_PORT=5432
-API_KEY=your_secret_key
-COINPAPRIKA_API_KEY=your_coinpaprika_key
+POSTGRES_USER=user\n
+POSTGRES_PASSWORD=password\n
+POSTGRES_DB=kasparro_etl\n
+POSTGRES_HOST=db\n
+POSTGRES_PORT=5432\n
+API_KEY=your_secret_key\n
+COINPAPRIKA_API_KEY=your_coinpaprika_key\n
 
 ### Running the System
 The system is fully automated using a Makefile.
@@ -82,15 +82,15 @@ The API is secured using a custom header `x-api-key`.
 
 ### 1. API Health Check
 Demonstration of the system running live on AWS EC2.
-![Health Check Screenshot](path/to/screenshot_health.png)
+![Health Check Screenshot](misc/screenshots/health-aws-e2.png)
 
 ### 2. ETL Scheduler Logs
 Evidence of the background ETL job running and processing data successfully.
-![ETL Logs Screenshot](path/to/screenshot_logs.png)
+![ETL Logs Screenshot](misc/screenshots/docker-logs.png)
 
 ### 3. Swagger UI
 Visual confirmation of the API documentation and data endpoints.
-![Swagger UI Screenshot](misc/screenshots/docker-logs.png)
+![Swagger UI Screenshot](misc/screenshots/swagger-ui.png)
 
 ## Deployment
 The system is deployed on an AWS EC2 instance (Ubuntu 24.04).

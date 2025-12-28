@@ -78,6 +78,20 @@ The API is secured using a custom header `x-api-key`.
     * Headers: `x-api-key` required.
 * **GET /stats**: Returns summary metrics of total records processed.
 
+## 🧪 Quick Test (Curl)
+You can test the live API immediately using the following commands.
+
+### 1. Check System Health (No Auth Required)
+```bash
+curl [http://13.61.5.11:8000/health](http://13.61.5.11:8000/health)
+```
+
+### 2. Fetch Data (Requires Auth)
+
+```bash
+curl -H "x-api-key: "add_api_key_from_mail" [http://13.61.5.11:8000/data?limit=5](http://13.61.5.11:8000/data?limit=5)"
+```
+
 ## Verification & Screenshots
 
 ### 1. API Health Check

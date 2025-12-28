@@ -86,10 +86,10 @@ You can test the live API immediately using the following commands.
 curl [http://13.61.5.11:8000/health](http://13.61.5.11:8000/health)
 ```
 
-### 2. Fetch Data (Requires Auth)
+### 2. Fetch Data (Requires Auth) (replace api_key with the key provided in the email)
 
 ```bash
-curl -H "x-api-key: "add_api_key_from_mail" [http://13.61.5.11:8000/data?limit=5](http://13.61.5.11:8000/data?limit=5)"
+curl -H "x-api-key: "add_api_key_from_mail" [http://13.61.5.11:8000/data?limit=5]"
 ```
 
 ## Verification & Screenshots

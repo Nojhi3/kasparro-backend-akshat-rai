@@ -44,15 +44,15 @@ The system follows a "Clean Architecture" pattern to ensure modularity and testa
 
 ### Environment Variables
 Create a file named `.env` in the root directory with the following configuration:
-
-POSTGRES_USER=user\n
-POSTGRES_PASSWORD=password\n
-POSTGRES_DB=kasparro_etl\n
-POSTGRES_HOST=db\n
-POSTGRES_PORT=5432\n
-API_KEY=your_secret_key\n
-COINPAPRIKA_API_KEY=your_coinpaprika_key\n
-
+```
+POSTGRES_USER=user
+POSTGRES_PASSWORD=password
+POSTGRES_DB=kasparro_etl
+POSTGRES_HOST=db
+POSTGRES_PORT=5432
+API_KEY=your_secret_key
+COINPAPRIKA_API_KEY=your_coinpaprika_key
+```
 ### Running the System
 The system is fully automated using a Makefile.
 

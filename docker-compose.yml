@@ -32,9 +32,6 @@ services:
     depends_on:
       db:
         condition: service_healthy
-    volumes:
-      # Mount code so you can edit without rebuilding (Development only)
-      - ./:/app
 
 volumes:
   postgres_data:

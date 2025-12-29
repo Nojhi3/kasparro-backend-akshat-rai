@@ -4,11 +4,11 @@ up:
 
 # Stop the system
 down:
-	docker-compose down
+	docker compose down
 
 # Run tests (We will implement the test container later)
 test:
-	docker-compose exec app pytest
+	docker compose exec app pytest
 
 # Helper: Clean up pycache
 clean:

@@ -1,0 +1,37 @@
+name: Kasparro CI Pipeline
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout Code
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Create dummy .env
+        run: |
+          echo "POSTGRES_USER=user" >> .env
+          echo "POSTGRES_PASSWORD=password" >> .env
+          echo "POSTGRES_DB=kasparro_etl" >> .env
+          echo "POSTGRES_HOST=db" >> .env
+          echo "API_KEY=test" >> .env
+
+      - name: Start System
+        run: make up
+
+      - name: Wait for DB
+        run: sleep 10
+
+      - name: Run Tests
+        run: make test
+
+      - name: Tear Down
+        run: make down

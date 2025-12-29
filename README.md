@@ -92,6 +92,12 @@ curl http://13.61.5.11:8000/health
 curl -H "x-api-key: my-secret-key" "http://13.61.5.11:8000/data?limit=5"
 ```
 
+### 3. Check Historical Data (Requires Auth)
+
+```bash
+curl -H "x-api-key: my-secret-key" "http://13.61.5.11:8000/data?source=historical_csv&limit=3"
+```
+
 ## Verification & Screenshots
 
 ### 1. API Health Check

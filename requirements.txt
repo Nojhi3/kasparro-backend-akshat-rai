@@ -19,3 +19,5 @@ schedule==1.2.1  # Useful for simple cron-like scheduling in Python
 # Testing
 pytest==7.4.4
 httpx==0.26.0    # For testing API endpoints
+
+yfinance

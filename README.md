@@ -83,13 +83,13 @@ You can test the live API immediately using the following commands.
 
 ### 1. Check System Health (No Auth Required)
 ```bash
-curl http://localhost:8000/health
+curl http://13.61.5.11:8000/health
 ```
 
 ### 2. Fetch Data (Requires Auth)
 
 ```bash
-curl -H "x-api-key: my-secret-key" "http://localhost:8000/data?limit=5"
+curl -H "x-api-key: my-secret-key" "http://13.61.5.11:8000/data?limit=5"
 ```
 
 ## Verification & Screenshots
